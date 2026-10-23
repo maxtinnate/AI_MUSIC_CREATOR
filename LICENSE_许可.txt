@@ -1,0 +1,34 @@
+© 2026 reaesteve（创作者 / Creator）
+
+本项目原创部分采用 知识共享 署名-非商业性使用-相同方式共享 4.0 国际许可协议（CC BY-NC-SA 4.0）。
+The original parts of this project are licensed under Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+
+完整法律文本 / Full legal code:  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-hans
+                                 https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+适用范围 / Covered: SKILL.md、README、compose_kit.py、mix_kit.py、example_song.py、render.c、build 脚本、项目文档。
+不适用 / Not covered (own licences): sound_library/GeneralUser-GS（见其 LICENSE.txt）；engine/tsf.h（MIT，见 TinySoundFont-LICENSE.txt）。
+
+【免费分享声明】
+本项目（技能说明、作曲引擎代码、示例曲与项目文档）由创作者 reaesteve 免费分享，仅供个人学习与非商业使用。
+禁止以任何名义出售、转售或打包售卖本项目，禁止通过付费下载、付费会员、付费课程、付费社群、
+“打赏/关注后获取”、引流收费等任何形式收取费用或设置付费门槛。
+可以免费转发与修改，但必须注明出处、保留本声明，并以相同许可免费分享。
+用本技能创作的音乐归创作者本人所有；以上限制针对的是本项目本身。
+许可：知识共享 署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0）
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
+第三方组件（GeneralUser GS 音色库、TinySoundFont）沿用其各自的原始许可。
+如果你是付费获得本项目的，请注意：它本来就是免费的。
+
+[Free-sharing notice]
+This project (skill guide, composition engine code, example song and project documents) is shared by its creator, reaesteve, free of
+charge for personal, non-commercial use. Selling, reselling or bundling it for sale is prohibited, as is
+charging for access in any form or under any pretext: paid downloads, memberships, courses, paid groups,
+"tip/follow to unlock", or lead-generation paywalls. You may share and adapt it for free, with credit,
+keeping this notice, under the same licence. Music you create with it belongs to you; these limits apply
+to the project itself.
+Licence: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+Third-party components (GeneralUser GS SoundFont, TinySoundFont) keep their own original licences.
+If you paid for this project, you were charged for something that is free.

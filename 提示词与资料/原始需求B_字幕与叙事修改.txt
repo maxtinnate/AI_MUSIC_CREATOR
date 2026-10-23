@@ -1,0 +1,309 @@
+========================================================================
+【免费分享声明】
+本项目（技能说明、作曲引擎代码、示例曲与项目文档）由本项目作者免费分享，仅供个人学习与非商业使用。
+禁止以任何名义出售、转售或打包售卖本项目，禁止通过付费下载、付费会员、付费课程、付费社群、
+“打赏/关注后获取”、引流收费等任何形式收取费用或设置付费门槛。
+可以免费转发与修改，但必须注明出处、保留本声明，并以相同许可免费分享。
+用本技能创作的音乐归创作者本人所有；以上限制针对的是本项目本身。
+许可：知识共享 署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0）
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans
+第三方组件（GeneralUser GS 音色库、TinySoundFont）沿用其各自的原始许可。
+如果你是付费获得本项目的，请注意：它本来就是免费的。
+========================================================================
+
+Please revise the existing video, **“告诉我，你是怎么作曲的”**, using the instructions below. Preserve the current musical composition, arrangement, instrumentation, duration, and emotional progression. Focus on rewriting the Chinese captions and improving visual storytelling, animation, editing, and the clarity of the musical interface.
+
+The premise is: **the AI answers a question about composing by composing the very piece the audience is hearing.** The visuals should reveal the creative process as the music unfolds.
+
+### 1. Visual style and original Claude desktop pet
+
+Use the reference video’s restrained visual language: dark backgrounds, warm coral-orange accents, clear typography, precise line animation, and deliberate negative space.
+
+**Use the original Claude desktop pet exactly as shown in the supplied screenshot.** Preserve its silhouette, proportions, pixel structure, face, and original colors. Do not redesign, reinterpret, accessorize, or turn it into a music-themed character. Do not add musical notes, hats, instruments, or other features to its body.
+
+Animate the original character through position, orientation, and its existing animation states. Any interaction effects must remain separate from the character’s design.
+
+Make the pet an active creator. Show clear sequences of **intention → action → visible result**: placing a note, moving its pitch, extending its duration, arranging a rhythmic pattern, handing a phrase to another voice, or adjusting an expression curve. Avoid making it merely follow the playhead or bounce beside notes.
+
+### 2. Opening sequence
+
+Begin with the question:
+
+**“告诉我，你是怎么作曲的？”**
+
+The AI responds through the following Chinese captions. Display each caption separately, allowing enough reading time:
+
+> 与其讲解怎样作曲，  
+> 不如，我直接写一首给你听。
+>
+> 接下来你听到的音乐，  
+> 没有人坐在钢琴前，
+>
+> 也没有乐队在录音棚里演奏。
+>
+> 有的，只是一行行代码。
+>
+> 我用它写下音符，  
+> 安排节奏，
+>
+> 让不同的声音，  
+> 在时间里相遇。
+>
+> 先从一个音符开始。
+
+Suggested visual progression:
+
+- Begin in the conversation interface. The pet moves from the response into a minimal composition workspace.
+- Reveal a fine timeline in the empty workspace.
+- Briefly introduce simple outlines of a piano and an empty piano bench, then let them fade.
+- Introduce outlines of an ensemble and recording microphones, then let them recede.
+- Reveal a short, meaningful code snippet.
+- The pet executes the code. Highlight the pitch and duration values as they generate the corresponding note.
+- Move closer as the pet places the first note on the track.
+
+Fit this sequence into the existing musical opening. Do not extend, delay, or rearrange the music simply to accommodate the text. If necessary, streamline caption transitions while preserving comfortable readability.
+
+### 3. Correct the musical timeline and note visualization
+
+**Rebuild the note display to eliminate misaligned timing, unintended intersections, overlapping graphics, and inconsistent positioning.**
+
+Use the underlying musical event data as the single source of truth for note placement and playback:
+
+- All tracks must share one horizontal time axis, tempo map, and scrolling transformation.
+- Notes that begin simultaneously must align vertically across tracks.
+- A note’s horizontal position must represent its onset, its width must represent its duration, and its vertical position must consistently represent pitch within its track.
+- Align bar lines, beat divisions, note positions, and the playhead. They must not drift relative to one another.
+- Highlight a note when its audible onset reaches the playhead, and sustain its active state for the corresponding duration.
+- Keep simultaneous chord tones horizontally aligned and vertically separated.
+- Preserve genuine musical overlaps and polyphony, but distinguish separate voices clearly. Do not “fix” valid music by changing note timing.
+- Prevent notes, labels, pets, code panels, and automation curves from unintentionally covering one another.
+- Put automation curves in clearly separated lanes or use a distinct visual treatment so they cannot be mistaken for note data.
+- When zooming or scrolling, transform the grid, notes, playhead, labels, and interaction anchors coherently.
+- Give percussion a legible rhythmic display rather than tiny, nearly invisible dots.
+- Use a consistent, refined visual vocabulary for notes. Piano-roll bars are appropriate in the composition interface; abstract strands should emerge during the later transformation sequence.
+
+At the transition into the landscape, deliberately release notes from the timeline. Until that moment, maintain precise musical alignment.
+
+### 4. Revised Chinese caption script
+
+All audience-facing captions, titles, explanatory labels, and narrative interface text must be in Chinese. Code may retain authentic syntax and identifiers.
+
+Use the following script after the opening sequence. Match captions to the corresponding musical events rather than forcing them into arbitrary time intervals. Each paragraph below is a separate caption cue.
+
+**First note and melody**
+
+> 音符记下声音的高低，  
+> 也记下它停留的时间。
+>
+> 把不同高低、不同长短的音，  
+> 依次排列，便有了旋律。
+>
+> 我让它向上，试着靠近期待。
+>
+> 再让它落下，留一点回望。
+
+**Repetition and variation**
+
+> 一段旋律需要被记住，  
+> 也需要一点变化。
+>
+> 于是，熟悉的几个音，  
+> 又走出了一条新的路。
+
+**Harmony**
+
+> 旋律之外，  
+> 还有可以同时响起的声音。
+>
+> 几个音叠在一起，组成和弦。
+>
+> 和弦彼此连接，  
+> 让音乐有了明暗。
+>
+> 同一段旋律，  
+> 换一组和弦，心情也会不同。
+>
+> 我在明亮的地方，  
+> 留下一点温柔的阴影。
+
+**Bass**
+
+> 再添上一行低音，  
+> 托住和声，也引向下一步。
+>
+> 让旋律走得再远，  
+> 脚下也有归处。
+
+**Rhythm**
+
+> 音符的长短、轻重与停顿，  
+> 让音乐有了节奏。
+>
+> 鼓点加入，  
+> 把前行的脚步变得清晰。
+
+**Second voice**
+
+> 我再写一条旋律，  
+> 让它与第一条相遇。
+>
+> 有时同行，
+>
+> 有时，接过对方未尽的话。
+
+**Instrumentation**
+
+> 接下来，为声音选择音色。
+>
+> 同一句旋律，  
+> 交给不同的乐器，会有不同的神情。
+>
+> 弦乐把呼吸拉长，
+>
+> 管乐从间隙中轻轻回应。
+
+**Arrangement and ensemble**
+
+> 哪个声音先来，  
+> 哪个声音退后，
+>
+> 哪里相拥，哪里留白。
+>
+> 这些安排，  
+> 让旋律逐渐长成完整的作品。
+>
+> 当所有声部相遇，
+>
+> 最初的几个音，  
+> 已经有了辽阔的回声。
+
+**Development and handoff**
+
+> 我让它换一种声音，  
+> 再讲一次。
+>
+> 也让它安静片刻，
+>
+> 给下一次展开，  
+> 留出空间。
+
+**Code and transition into the world**
+
+> 这些音符、节奏与相遇，  
+> 都被我写进代码。
+>
+> 接下来，  
+> 我也想让你看见它们。
+
+**Landscape transformation**
+
+> 音符沿着旋律，  
+> 走出了音轨。
+>
+> 起伏的旋律，绵延成山。
+>
+> 层叠的和声，铺开成水。
+>
+> 细碎而清亮的音，  
+> 升起，成为星光。
+>
+> 那句还未结束的旋律，  
+> 沿着山谷，流向远方。
+>
+> 最初的一个音，  
+> 在夜空中，亮成了月亮。
+>
+> 你听见的声音，  
+> 在这里，有了形状。
+
+**Return to the tracks**
+
+> 乐句渐渐收拢。
+>
+> 山川、流水与星光，  
+> 沿着来路，回到音轨。
+>
+> 每一个声部，  
+> 都留下了自己走过的路。
+>
+> 而最初的旋律，  
+> 依然在它们之间。
+
+**Closing response**
+
+> 这就是我作曲的过程。
+>
+> 从几个音开始，
+>
+> 让它们彼此连接，  
+> 慢慢成为一个世界。
+
+**Final title**
+
+> 告诉我，你是怎么作曲的
+>
+> 一首曲子，讲述自己的诞生。
+
+### 5. Redesign the visual progression
+
+The current video spends too long in an almost unchanged multitrack view. Preserve the music, but give each creative stage its own visual focus:
+
+- **Melody:** move close to individual notes and show how pitch and duration shape a phrase.
+- **Variation:** visually relate the original phrase to its modified version, making the change easy to recognize.
+- **Harmony:** reveal vertically aligned chord tones beneath the melody. Emphasize the specific chord being introduced or changed.
+- **Bass:** shift attention downward and show the relationship between bass movement and harmony.
+- **Rhythm:** introduce a clear beat grid and purposeful rhythmic placement.
+- **Second voice:** show a recognizable phrase passing between two voices, with the pets performing a visible handoff.
+- **Instrumentation:** connect instrument labels and track colors to the phrase being played. Make the transfer between timbres visible.
+- **Full ensemble:** pull back to reveal the complete arrangement only after the audience understands its parts.
+
+Alternate close-ups, focused track views, and full-project views according to musical phrasing. Avoid arbitrary camera movement, constant cutting, or prolonged static compositions.
+
+### 6. Make the transformation continuous and readable
+
+At the musical expansion, let notes leave the tracks and become a landscape through clear, traceable transformations.
+
+Establish one transformation at a time:
+
+- A recognizable melodic contour extends into a mountain ridge.
+- Layers of harmony spread into the water’s surface.
+- Short, bright notes rise into stars.
+- A continuing melodic line flows through the valley as a river.
+- The first note grows into the moon.
+
+Arrange these events in an order that fits the existing music and caption sequence. Retain each source element’s identity through color, contour, or motion so the audience can follow where it goes.
+
+Avoid a sudden burst of tangled particles that conceals the transformation. Do not let code panels cover the focal action.
+
+Once the world is established, develop the scene through purposeful camera movement and evolving details. Follow a musical line through the landscape instead of holding the same wide view for an extended period.
+
+### 7. Show meaningful code-to-result relationships
+
+At selected moments:
+
+**Highlight a short code instruction → execute it → show the corresponding musical or visual change → clear the panel.**
+
+Use concise, credible code displays. Each appearance should explain one relationship. Avoid simultaneous multi-line code, dense animation, moving pets, and long captions competing for attention.
+
+The world-building code should visibly correspond to the mountain, water, stars, or moon being formed at that moment.
+
+### 8. Complete the ending coherently
+
+As the music resolves, transform the landscape back into its identifiable source notes and tracks. Keep the return paths readable and preserve the identity of the musical parts.
+
+Reveal the completed project, briefly emphasize the original melodic phrase within it, then return to the conversation interface.
+
+The caption script intentionally preserves the full arrangement at the ending. Do not claim that only a seed or a single note remains while the screen still shows every track.
+
+### 9. Caption readability and final review
+
+- Display one caption cue at a time, with no more than two lines.
+- Use consistent Chinese typography, punctuation, size, contrast, and placement.
+- Keep captions inside a safe area and separate from track labels and controls.
+- Leave deliberate text-free passages, especially during the full ensemble and landscape sequence.
+- Use complete Chinese characters in finished captions. Any simulated Chinese input method animation must resolve cleanly before the scene changes.
+- Check readability at ordinary embedded-player and mobile viewing sizes.
+- Verify that every caption describes what is actually visible or audibly happening.
+- Review note alignment and animation frame by frame around entrances, zooms, scrolling transitions, and the landscape transformation.
+
+The finished video should feel like **a composition bringing itself into existence**: understandable at the beginning, increasingly expressive as the arrangement grows, and poetic when the music becomes a world.
